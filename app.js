@@ -1,24 +1,20 @@
 "use strict";
-/* type httpMethod = "post" | "get";
-
-type coolString = string;
-
-function fetchWithAuth(url: string, method: httpMethod): 1 | -1 {
-  return 1;
-}
-
-fetchWithAuth("d", "post");
-
-let methods = "post";
-fetchWithAuth("dsd", methods as "post"); */
-let userWithRole = {
-    user: {
-        name: "Вася",
-        age: 25,
-        skills: [],
-    },
-    role: {
-        name: "admin",
-        id: 1,
+let user = {
+    roleId: 1,
+    name: "Вася",
+    age: 25,
+    skills: ["sdfas", "asdfasdf"],
+    createdAt: new Date(),
+    log(id) {
+        return "1";
     },
 };
+let phones;
+phones = ["iPhone 7", "HTC 10", "HP Elite x3"];
+let myPhone = phones[0];
+console.log(myPhone);
+var colors = {};
+colors["red"] = "#ff0000";
+colors["green"] = "#00ff00";
+colors["blue"] = "#0000ff";
+console.log(colors["red"]);
