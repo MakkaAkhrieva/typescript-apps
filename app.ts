@@ -1,47 +1,32 @@
 interface User {
   name: string;
   age: number;
-  skills: string[];
-
-  log: (id: number) => string;
+  skills?: string[];
 }
 
-interface Role {
-  roleId: number;
-}
-interface UserWithRole extends User, Role {
-  createdAt: Date;
-}
-
-let user: UserWithRole = {
-  roleId: 1,
+let user: User = {
   name: "Вася",
   age: 25,
-  skills: ["sdfas", "asdfasdf"],
-  createdAt: new Date(),
-
-  log(id) {
-    return "1";
-  },
 };
 
-interface StringArray {
-  [index: number]: string;
+function multiply(first: number, second?: number): number {
+  if (!second) {
+    return first * first;
+  }
+  return first * second;
 }
 
-let phones: StringArray;
-phones = ["iPhone 7", "HTC 10", "HP Elite x3"];
+multiply(5);
 
-let myPhone: string = phones[0];
-console.log(myPhone);
-
-interface Dictionary {
-  [index: string]: string;
+interface UserPro {
+  login: string;
+  password?: {
+    type: "primery" | "secondary";
+  };
 }
 
-var colors: Dictionary = {};
-colors["red"] = "#ff0000";
-colors["green"] = "#00ff00";
-colors["blue"] = "#0000ff";
+function testPass(user: UserPro) {
+  const t = user.password?.type;
+}
 
-console.log(colors["red"]);
+testPass(user);
