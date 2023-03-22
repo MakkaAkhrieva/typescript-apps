@@ -1,32 +1,8 @@
-function logId(id: string | number | boolean) {
-  if (typeof id === "string") {
-    console.log(id);
-  } else if (typeof id === "number") {
-    console.log(id);
-  } else {
-    console.log(id);
-  }
+function fetchWithAuth(url: string, method: "post" | "get"): 1 | -1 {
+  return 1;
 }
 
-function logError(err: string | string[]) {
-  if (Array.isArray(err)) {
-    console.log(err);
-  } else {
-    console.log(err);
-  }
-}
+fetchWithAuth("d", "post");
 
-function logObject(obj: { a: number } | { b: number }) {
-  if ("a" in obj) {
-    console.log(obj.a);
-  } else {
-    console.log(obj.b);
-  }
-}
-
-function logMultipleIds(a: string | number, b: string | boolean) {
-  if (a === b) {
-  } else {
-    console.log(a);
-  }
-}
+let methods = "post";
+fetchWithAuth("dsd", methods as "post");
